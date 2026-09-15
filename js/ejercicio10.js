@@ -1,29 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('.item-ejercicio');
-    const tituloEl = document.getElementById('titulo-ejercicio');
-    const subtituloEl = document.getElementById('subtitulo-ejercicio');
-    const descripcionEl = document.getElementById('descripcion-ejercicio');
+    const inputCelsius = document.getElementById('celsius');
+    const inputFahrenheit = document.getElementById('fahrenheit');
+    const btnConvertir = document.getElementById('btn-convertir');
+    const mensajeError = document.getElementById('mensaje-error');
 
-    // Valores por defecto
-    const tituloDefault = "SELECCIONA";
-    const subtituloDefault = "UN EJERCICIO";
-    const descDefault = "PASA EL CURSOR SOBRE UNA OPCIÓN PARA VER SU DESCRIPCIÓN.";
+    function realizarConversion() {
+        const valorInput = inputCelsius.value.trim();
 
-    items.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            const titulo = item.getAttribute('data-titulo');
-            const sub = item.getAttribute('data-sub');
-            const desc = item.getAttribute('data-desc');
+        if (valorInput === '') {
+            mensajeError.textContent = 'Por favor, ingresa un valor en grados Celsius.';
+            inputFahrenheit.value = '';
+            inputCelsius.focus();
+            return;
+        }
 
-            tituloEl.textContent = titulo;
-            subtituloEl.textContent = sub;
-            descripcionEl.textContent = desc;
-        });
+        // 2. Validación: Debe ser un número válido
+        const celsius = Number(valorInput);
+        if (isNaN(celsius)) {
+            mensajeError.textContent = 'El valor ingresado debe ser numérico.';
+            inputFahrenheit.value = '';
+            return;
+        }
 
-        item.addEventListener('mouseleave', () => {
-            tituloEl.textContent = tituloDefault;
-            subtituloEl.textContent = subtituloDefault;
-            descripcionEl.textContent = descDefault;
-        });
+        mensajeError.textContent = '';
+
+        const fahrenheit = (celsius * 9 / 5) + 32;
+
+        const resultadoFormateado = Number.isInteger(fahrenheit) 
+            ? `${fahrenheit}°F` 
+            : `${fahrenheit.toFixed(2)}°F`;
+
+        inputFahrenheit.value = resultadoFormateado;
+    }
+
+    btnConvertir.addEventListener('click', realizarConversion);
+
+    inputCelsius.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            realizarConversion();
+        }
     });
 });
