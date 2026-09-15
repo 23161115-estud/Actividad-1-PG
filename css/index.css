@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', monospace;
+    image-rendering: pixelated;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.tienda-container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: 1fr 1.2fr;
+    gap: 16px;
+    width: 960px;
+    height: 640px;
+    padding: 16px;
+    background-color: #000;
+    transform: scale(1.1);
+    transform-origin: center center;
+}
+
+.cuadro-top-left {
+    border: 4px solid #ffffff;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imagen-spamton {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cuadro-top-right {
+    border: 4px solid #ffffff;
+    background-color: #000;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    overflow: hidden;
+}
+
+.titulo-destacado {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    word-break: break-word;
+}
+
+.subtitulo-destacado {
+    color: #ffff00;
+    font-size: 15px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    word-break: break-word;
+}
+
+.cuadro-bottom-left {
+    border: 4px solid #ffffff;
+    background-color: #000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.cuadro-bottom-left::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cuadro-bottom-left::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.cuadro-bottom-left::-webkit-scrollbar-thumb {
+    background: #ffffff;
+}
+
+.lista-ejercicios {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.item-ejercicio {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 1.3;
+}
+
+.item-ejercicio .corazon {
+    color: transparent;
+    margin-right: 10px;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.item-ejercicio:hover .corazon {
+    color: #ff0000;
+}
+
+.item-ejercicio:hover {
+    color: #ffff00;
+}
+
+.item-ejercicio .nombre {
+    flex-grow: 1;
+}
+
+.item-ejercicio .precio {
+    color: #ffffff;
+    font-size: 13px;
+    text-align: right;
+}
+
+.item-ejercicio:hover .precio {
+    color: #ffff00;
+}
+
+
+.saldo-kromer {
+    font-size: 15px;
+    color: #ffffff;
+    text-align: right;
+}
+.cuadro-bottom-right {
+    border: 4px solid #ffffff;
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.texto-descripcion {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #ffffff;
+    text-transform: uppercase;
+    word-break: break-word;
+}
