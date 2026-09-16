@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17 Gestión de Tareas</title>
+    <link rel="stylesheet" href="css/ejercicio17.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h1>Gestión de Tareas</h1>
+        <p class="subtitulo">Agrega tus pendientes.</p>
+
+        <form id="formulario-conversor" class="formulario" novalidate>
+            <div class="grupo-formulario">
+                <label for="tarea">Nueva Tarea</label>
+                <input type="text" id="tarea" placeholder="Ej: Estudiar JavaScript" autocomplete="off">
+                <span id="mensaje-error" class="mensaje-error"></span>
+            </div>
+            <button type="button" id="btn-agregar" class="boton-enviar">
+                Agregar Tarea <span>+</span>
+            </button>
+
+            <div class="grupo-formulario">
+                <label>Tareas pendientes</label>
+                <ul id="lista-tareas" class="lista-tareas">
+                    <li class="lista-vacia">No tienes tareas pendientes.</li>
+                </ul>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/ejercicio17.js"></script>
+</body>
+</html>

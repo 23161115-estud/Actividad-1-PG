@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16 Calculadora</title>
+    <link rel="stylesheet" href="css/ejercicio16.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/ejercicio16.js"></script>
+</head>
+
+<body>
+    <div class="contenedor-formulario">
+        <h1>Calculadora</h1>
+        <p class="subtitulo">Ingresa dos números y elige la operación que deseas realizar.</p>
+
+        <div class="grupo-formulario">
+            <label>Número 1</label>
+            <input type="text" id="numero1">
+        </div>
+
+        <div class="grupo-formulario">
+            <label>Número 2</label>
+            <input type="text" id="numero2">
+        </div>
+
+        <div class="grupo-botones">
+            <button class="boton-operacion" onclick="calcularOperacion('suma')">+</button>
+            <button class="boton-operacion" onclick="calcularOperacion('resta')">−</button>
+            <button class="boton-operacion" onclick="calcularOperacion('multiplicacion')">×</button>
+            <button class="boton-operacion" onclick="calcularOperacion('division')">÷</button>
+        </div>
+
+        <div class="grupo-formulario">
+            <label>Resultado</label>
+            <input type="text" id="resultado" readonly>
+        </div>
+    </div>
+</body>
+
+</html>

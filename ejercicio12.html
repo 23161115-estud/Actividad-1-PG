@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12 Conversor Pesos Mexicanos a Dólares</title>
+    <link rel="stylesheet" href="css/ejercicio12.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h1>Conversor de Divisas</h1>
+        <p class="subtitulo">Ingresa la cantidad en pesos mexicanos.</p>
+
+        <form id="formulario-conversor" class="formulario" novalidate>
+            <div class="grupo-formulario">
+                <label for="pesos">Cantidad en Pesos Mexicanos (MXN)</label>
+                <input type="text" id="pesos" placeholder="Ej: 500" autocomplete="off">
+                <span id="mensaje-error" class="mensaje-error"></span>
+            </div>
+
+            <button type="button" id="btn-convertir" class="boton-enviar">
+                Convertir <span>→</span>
+            </button>
+
+            <div class="grupo-formulario">
+                <label for="dolares">Cantidad en Dólares (USD)</label>
+                <input type="text" id="dolares" placeholder="Resultado en dólares" readonly>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/ejercicio12.js"></script>
+</body>
+</html>
