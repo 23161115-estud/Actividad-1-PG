@@ -1,0 +1,47 @@
+:root {
+    --color-primario: #1F2A44;
+    --color-primario-hover: #16203A;
+    --color-acento: #E3A857;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #EEF1F7;
+}
+
+.card {
+    border-top: 4px solid var(--color-acento) !important;
+}
+
+.titulo-principal {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--color-primario);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.btn-morado {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+}
+
+.btn-morado:hover {
+    background-color: var(--color-primario-hover);
+    color: white;
+}
+
+.btn-morado:focus {
+    box-shadow: 0 0 0 0.25rem rgba(227, 168, 87, 0.35);
+}
+
+#lista:empty::after {
+    content: 'Aún no hay elementos en la lista.';
+    display: block;
+    text-align: center;
+    color: #9AA3B2;
+    font-style: italic;
+    padding: 15px 0;
+}
