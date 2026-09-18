@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // 2. Validación: Debe ser un número válido
         const celsius = Number(valorInput);
         if (isNaN(celsius)) {
             mensajeError.textContent = 'El valor ingresado debe ser numérico.';
